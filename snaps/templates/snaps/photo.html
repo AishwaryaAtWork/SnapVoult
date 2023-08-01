@@ -10,13 +10,8 @@
         rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
         crossorigin="anonymous">
 
-    {# Custom CSS #} 
-    <style>
-        
-    </style>
-
 </head>
-<body class="my-3">
+<body class="m-3">
     
     <div class="container">
         <div class="row justify-content-center">
@@ -25,18 +20,15 @@
                 <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Go Back</a>
 
                 <div style="height: 80vh;">
-                    <img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.jpg" 
-                        class="card-img-top" alt="..." style="max-height: 90%; max-width: 100%;">
+                    <img src="{{photo.image.url}}" 
+                        class="card-img-top mb-2" alt="..." style="max-height: 88%; max-width: 100%; object-fit: contain">
                         
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis hic est ab.</p>
+                    <p class="fs-5 py-2 fst-italic lh-base">{{photo.description | title}}</p>
                 </div>
 
             </div>
-
         </div>
-
     </div>
-
 
 </body>
 </html>

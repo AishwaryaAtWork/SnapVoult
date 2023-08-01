@@ -20,18 +20,26 @@
             {# Section containing categories and menues #}
             <div class="col-md-3">
                 <div class="card" >
-                    <div class="card-header">
+                    <div class="card-header fs-5 fst-italic fw-bolder">
                       Categories
                     </div>
                     
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">All</li>
-                      <li class="list-group-item">An item</li>
-                      <li class="list-group-item">A second item</li>
-                      <li class="list-group-item">A third item</li>
+                    <ul class="list-group list-group-flush" >
+                      
+                      <li class="list-group-item">
+                        <a style="text-decoration:none; color: black;" href="{% url 'gallery' %}">All</a>
+                      </li>
+                      
+                      {% for category in categories %}
+                        <a href="{% url 'gallery' %}?category={{category.name}}" 
+                            style="text-decoration:none; color: black;">
+                            
+                            <li class="list-group-item">{{category.name | title}}</li>
+                        </a>
+                      {% endfor %}
                       
                         <a href="{% url 'addPhoto' %}" 
-                        class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>
+                        class="btn btn-dark btn-block btn-sm m-1 fs-5">Add Photo</a>
 
                     </ul>
 
@@ -42,19 +50,24 @@
             <div class="col-md-9">
 
                 <div class="row">
+                    {% for photo in photos %}
                     <div class="col-md-4">
-                        <div class="card my-2">
-                            <img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.jpg" 
-                                class="card-img-top" alt="..." style="object-fit: cover;">
+                        <div class="card mb-2">
+                            <img src="{{photo.image.url}}" 
+                                class="card-img-top" alt="..." style="object-fit: cover; height: 15rem">
                             
                             <div class="card-body">
-                              <small class="card-text">Category: Pet</small>
+                              <small class="card-text fw-bolder">Category : {{photo.category.name | title}}</small>
                             </div>
 
                             <a class="btn btn-outline-dark btn-sm m-1"
-                                href="{% url 'viewPhoto' 5 %}">View</a>
+                                href="{% url 'viewPhoto' photo.id %}">View</a>
                           </div>
                     </div>
+                    {% empty %}
+                    <h3>No photos...</h3>
+
+                    {% endfor %}
 
                 </div>
             </div>
