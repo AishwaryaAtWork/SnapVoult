@@ -10,12 +10,6 @@
         rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
         crossorigin="anonymous">
 
-    {# Custom CSS #} 
-    <style>
-        
-    </style>
-
-
 </head>
 <body class="m-5">
     
@@ -35,6 +29,10 @@
                       <li class="list-group-item">An item</li>
                       <li class="list-group-item">A second item</li>
                       <li class="list-group-item">A third item</li>
+                      
+                        <a href="{% url 'addPhoto' %}" 
+                        class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>
+
                     </ul>
 
                   </div>
@@ -44,11 +42,10 @@
             <div class="col-md-9">
 
                 <div class="row">
-
                     <div class="col-md-4">
                         <div class="card my-2">
                             <img src="https://t4.ftcdn.net/jpg/03/03/62/45/360_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.jpg" 
-                                class="card-img-top" alt="...">
+                                class="card-img-top" alt="..." style="object-fit: cover;">
                             
                             <div class="card-body">
                               <small class="card-text">Category: Pet</small>
@@ -60,13 +57,9 @@
                     </div>
 
                 </div>
-
             </div>
-        
         </div>
-
     </div>
-
 
 </body>
 </html>
