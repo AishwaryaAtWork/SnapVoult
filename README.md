@@ -8,18 +8,18 @@ A application in which you can archive your pictures/snaps and showcase it.
 Django, HTML and CSS.
 
 ## Screenshots
-![Screenshot (663)](https://github.com/AishwaryaAtWork/SnapVoult/assets/109826222/ad146749-9ffe-4147-93b5-cccd4fc204ef)
+![Screenshot (663)](https://github.com/AishwaryaAtWork/SnapVoult/assets/109826222/789d4043-f798-48df-8437-2b537fc6b147)
 
-![Screenshot (662)](https://github.com/AishwaryaAtWork/SnapVoult/assets/109826222/c2e567e4-00b0-4f08-9d02-7b5b3b304cef)
+![Screenshot (662)](https://github.com/AishwaryaAtWork/SnapVoult/assets/109826222/9356174b-1051-43d7-b8c4-113f1d8ff9a4)
 
-![Screenshot (661)](https://github.com/AishwaryaAtWork/SnapVoult/assets/109826222/3ca7b55c-3970-429b-833c-a69d374842f3)
-
+![Screenshot (661)](https://github.com/AishwaryaAtWork/SnapVoult/assets/109826222/72477f03-2994-481f-9a9f-62afce599600)
 
 ## Feedback
 
 If you like the app , don't forget to give stars.
 
 Link - https://github.com/AishwaryaAtWork/SnapVoult
+
 
 
 ## Acknowledgements
